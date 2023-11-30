@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gamebackground"
+    tools:context=".SoloMode">
+
+    <ImageView
+        android:id="@+id/gamelogo"
+        android:layout_width="191dp"
+        android:layout_height="200dp"
+        app:layout_constraintDimensionRatio="250:208"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gamego"/>
+
+    <TextView
+        android:id="@+id/scorepone"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Score P1 : 0"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gamelogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <!-- Aligner boutons 1, 2 et 3 -->
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="117dp"
+        android:layout_height="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/scorepone"
+        app:srcCompat="@drawable/card_back"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"/>
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="117dp"
+        android:layout_height="210dp"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/scorepone"
+        app:srcCompat="@drawable/card_back"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"/>
+
+    <ImageButton
+        android:id="@+id/button3"
+        android:layout_width="117dp"
+        android:layout_height="210dp"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scorepone"
+        app:srcCompat="@drawable/card_back"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Aligner boutons 4, 5 et 6 en dessous de boutons 1, 2 et 3 -->
+    <ImageButton
+        android:id="@+id/button4"
+        android:layout_width="117dp"
+        android:layout_height="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:srcCompat="@drawable/card_back"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:id="@+id/button5"
+        android:layout_width="117dp"
+        android:layout_height="210dp"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:srcCompat="@drawable/card_back"
+        android:scaleType="fitXY"/>
+
+    <ImageButton
+        android:id="@+id/button6"
+        android:layout_width="117dp"
+        android:layout_height="210dp"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:srcCompat="@drawable/card_back"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/scoreptwo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Score P2 : 0"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/quitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/quitter"
+        android:theme="@style/Button.Color"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gamelogo"
+        app:layout_constraintBottom_toBottomOf="@+id/gamelogo" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/restart"
+        android:theme="@style/Button.Color"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gamelogo"
+        app:layout_constraintBottom_toBottomOf="@+id/gamelogo"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

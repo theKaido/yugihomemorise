@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settingsbackground"
+    tools:context=".Settings">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="328dp"
+        android:layout_height="277dp"
+        android:contentDescription="@string/description_logo"
+        android:src="@drawable/setting_logov2"
+        app:layout_constraintDimensionRatio="328:277"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/nightmode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:text="@string/darkmode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImageView" />
+
+    <SeekBar
+        android:id="@+id/volume"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:max="100"
+        android:progress="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nightmode" />
+
+    <ImageButton
+        android:id="@+id/Soundcontroller"
+        android:layout_width="52dp"
+        android:layout_height="59dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/volume"
+        android:contentDescription="@string/description_logo"
+        app:layout_constraintTop_toBottomOf="@id/nightmode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/volume"
+        app:layout_constraintBottom_toBottomOf="@id/volume"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp" />
+
+    <Button
+        android:id="@+id/skinbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/Button.Color"
+        app:layout_constraintTop_toBottomOf="@id/volume"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/cardskin"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/resetbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/Button.Color"
+        app:layout_constraintTop_toBottomOf="@id/skinbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/resetscore"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/Button.Color"
+        app:layout_constraintTop_toBottomOf="@id/resetbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/back"
+        android:textColor="@color/black"
+        android:layout_marginTop="35dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
